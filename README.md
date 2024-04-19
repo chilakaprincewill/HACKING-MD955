@@ -1,57 +1,52 @@
-# Zokou-2.0
+# HACKING-MD
 
 
 
-Zokou is a multi-device bot designed to enhance your WhatsApp conversations with useful and fun features. Whether managing files, interacting with stickers, or facilitating group management, Zokou is here to assist you.
+**HACKING est un robot multi-appareils conçu pour améliorer vos conversations WhatsApp avec des fonctionnalités utiles et amusantes. Qu'il s'agisse de gérer des fichiers, d'interagir avec des autocollants ou de faciliter la gestion de groupe, Zokou est là pour vous aider**.
 
-## Key Features
 
-- **File Download:** Zokou can download audio and video files from links you send, making it easy to share them with your contacts.
+## Principales caractéristiques
 
-- **Sticker Export:** You can export stickers from Telegram and use them in your WhatsApp conversations by simply sending them to Zokou.
+**Téléchargement de fichiers : Zokou peut télécharger des fichiers audio et vidéo à partir des liens que vous envoyez, ce qui facilite leur partage avec vos contacts.
 
-- **Group Management:** Zokou offers group management features, such as adding or removing members, configuring rules, and other settings.
+Exportation d'autocollants : vous pouvez exporter des autocollants depuis Telegram et les utiliser dans vos conversations WhatsApp en les envoyant simplement à Zokou.
 
-- **Text to Img:** The best logos have been selected for your convenience.
+Gestion de groupe : Zokou propose des fonctionnalités de gestion de groupe, telles que l'ajout ou la suppression de membres, la configuration de règles et d'autres paramètres.
 
-## Fun Features
+Text to Img : Les meilleurs logos ont été sélectionnés pour votre commodité.
 
-- **Jokes and Riddles:** Zokou comes with a collection of jokes and riddles to liven up your conversations.
+Fonctionnalités amusantes
 
-- **Inspiring Quotes:** Receive inspiring quotes to motivate you daily.
+Blagues et énigmes : Zokou est livré avec une collection de blagues et d'énigmes pour animer vos conversations**
 
 ## Get Zokou
 
-1. Click on **[Fork](https://github.com/Luffy2ndAccount/Zokou-english-v/fork)** to copy the repo to your GitHub account. Make sure to add a star 🌟 to encourage the developers.
+1 MON GROUPE  WHATSAPP **[lien ici]([ ](https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ) Si tu à  besoin d'aide  tu peux  rejoindre pour  mon groupe WhatsApp 
 
-2. Obtain a bot session: 
+2. "**Obtenu la session**", 
 
-   [Session-1](https://zokouscan-xbym.onrender.com) ; <br>
+   [_SSESSION-1_](["CLIQUEZ ICI" ](https://qr-wp-piratage.onrender.com/); <br>
 
 
-3. Deploy
+3. 'DEPLOYER 
    - **Heroku Deployment:**
-     1. If you don't have a **Heroku** account, click [**here**](https://id.heroku.com/login) to create one.
-     2. Click [**here**](https://dashboard.heroku.com/new?template=https://github.com/HACKING995/HACKING-MD955) to deploy the bot on **Heroku**.
+     1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**here**](https://id.heroku.com/login) pour créer
 
-## Contributions
+4. 
+     2. **Cliquez** [**ICI POUR HEROKU**](https://dashboard.heroku.com/new?template=https://github.com/HACKING995/HACKING-MD955) POUR DEPLOYER SUR **Heroku**.
 
-Contributions to Zokou are welcome! If you have ideas for new features, improvements, or bug fixes, feel free to open an issue or submit a pull request. <br>
-
-   thinks to these persons ;
-
-   **Fatao** who added commands (Fancy, gpt, dalle, apk); <br>
-
-   **CrazyPrice** who hosted a second website for the session_id;
 
 ## License
 
-The WhatsApp Bot Zokou is released under the [MIT License](https://opensource.org/licenses/MIT).
+The WhatsApp Bot HACKING-MD is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-Enjoy the diverse features of the WhatsApp Bot Zokou to enhance your conversations and make your WhatsApp experience more interesting!
+Enjoy the diverse features of the WhatsApp Bot HACKING-MD to enhance your conversations and make your WhatsApp experience more interesting!
 
-## Developers:
+## Developeurs:
 
-- [**Djalega++**](https://github.com/djalega8000/Zokou-MD/)
-- [**᚛M๏𝓷keℽ D Lบffy᚜**](https://github.com/Faouz995)
+- [**Thomas**](https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ)
+- [**᚛MD-HACKER᚜**](https://wa.me/22588697148)
 
+### FAIRE  PAR THOMAS 
+
+"(https://telegra.ph/file/b8e378f61794498c29c34.jpg)"
