@@ -3,7 +3,7 @@
   "description":"bot whatsapp développé par thomas",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://telegra.ph/file/b8e378f61794498c29c34.jpg",
-  "repository":"https://github.com/HACKING995/HACKING995",
+  "repository":"https://github.com/HACKING995/HACKING-MD955",
   "succes_url":"/",
   "stack":"container",
   "env":{
@@ -42,7 +42,7 @@
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.pinimg.com/736x/0a/70/6f/0a706f90d6a1fb39919aedfbb7fdd8d3.jpg",
+      "value":"https://telegra.ph/file/b8e378f61794498c29c34.jpg",
       "required":false
        
      },
@@ -74,14 +74,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "Djalega++"
+    "value": "Thomas"
   },
     "NUMERO_OWNER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "22891733300"
+    "value": "2250545065189"
   },
     "WARN_COUNT":
   {
