@@ -19,20 +19,21 @@ Fonctionnalités amusantes
 
 Blagues et énigmes : Zokou est livré avec une collection de blagues et d'énigmes pour animer vos conversations**
 
-## Get Zokou
+## HACKING 
 
 1 MON GROUPE  WHATSAPP **[lien ici]([ ](https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ) Si tu à  besoin d'aide  tu peux  rejoindre pour  mon groupe WhatsApp 
 
 2. "**Obtenu la session**", 
 
-   [_SSESSION-1_](["CLIQUEZ ICI" ](https://qr-wp-piratage.onrender.com/); <br>
+   [_SSESSION-1_](["CLIQUEZ ICI" ](https://qr-wp-piratage.onrender.com/); <br> POUR  DÉPLOYER SUR HEROKU 
 
 
-3. 'DEPLOYER 
+3. 'DEPLOYER
+   
    - **Heroku Deployment:**
      1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**here**](https://id.heroku.com/login) pour créer
 
-4. 
+5. 
      2. **Cliquez** [**ICI POUR HEROKU**](https://dashboard.heroku.com/new?template=https://github.com/HACKING995/HACKING-MD955) POUR DEPLOYER SUR **Heroku**.
 
 
@@ -49,4 +50,4 @@ Enjoy the diverse features of the WhatsApp Bot HACKING-MD to enhance your conver
 
 ### FAIRE  PAR THOMAS 
 
-"(https://telegra.ph/file/b8e378f61794498c29c34.jpg)"
+[![HACKING955](https://telegra.ph/file/b8e378f61794498c29c34.jpg)",
