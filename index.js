@@ -235,7 +235,7 @@ function mybotpic() {
                 auteurMessage,
                 nomAuteurMessage,
                 idBot,
-                verifzoukouAdmin,
+                verifzokouAdmin,
                 prefixe,
                 arg,
                 repondre,
