@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Luffy2ndAccount/Zokou-english-v  /root/hack_BOt
-WORKDIR /root/hack_Bot/
+RUN git clone https://github.com/Luffy2ndAccount/Zokou-english-v  /root/hacking_BOt
+WORKDIR /root/hacking_Bot/
 
 
 COPY package.json .
