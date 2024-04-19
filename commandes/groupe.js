@@ -31,7 +31,7 @@ zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, z
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
   tag += `========================\n  
-        🌟 *Zokou-Md* 🌟
+        🌟 *HACKING-Md* 🌟
 ========================\n
 👥 Group : ${nomGroupe} 🚀 
 👤 Autor : *${nomAuteurMessage}* 👋 
@@ -660,7 +660,7 @@ zokou({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,command
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'Zokou-tag',
+          pack: 'Hacking-tag',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
