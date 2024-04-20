@@ -68,7 +68,7 @@ let menuMsg = `
 "To use a command, insert ${prefixe} followed by the command_name."
  
     Powered by HACKING-MD 
-                                                
+   voici mon lien Yubtb:"https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd"                                          
 *»»————— ★ —————««*
 `;
 
