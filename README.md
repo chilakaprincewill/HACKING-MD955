@@ -7,17 +7,17 @@
 
 ## Principales caractéristiques
 
-**Téléchargement de fichiers : Zokou peut télécharger des fichiers audio et vidéo à partir des liens que vous envoyez, ce qui facilite leur partage avec vos contacts.
+**Téléchargement de fichiers : Hacking peut télécharger des fichiers audio et vidéo à partir des liens que vous envoyez, ce qui facilite leur partage avec vos contacts.
 
 Exportation d'autocollants : vous pouvez exporter des autocollants depuis Telegram et les utiliser dans vos conversations WhatsApp en les envoyant simplement à Zokou.
 
-Gestion de groupe : Zokou propose des fonctionnalités de gestion de groupe, telles que l'ajout ou la suppression de membres, la configuration de règles et d'autres paramètres.
+Gestion de groupe : Haking propose des fonctionnalités de gestion de groupe, telles que l'ajout ou la suppression de membres, la configuration de règles et d'autres paramètres.
 
 Text to Img : Les meilleurs logos ont été sélectionnés pour votre commodité.
 
 Fonctionnalités amusantes
 
-Blagues et énigmes : Zokou est livré avec une collection de blagues et d'énigmes pour animer vos conversations**
+Blagues et énigmes : Hacking est livré avec une collection de blagues et d'énigmes pour animer vos conversations**
 
 ## HACKING 
 
