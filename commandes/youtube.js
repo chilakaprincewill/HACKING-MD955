@@ -1,4 +1,4 @@
-const { zoukou } = require("../framework/hack");
+const { zokou } = require("../framework/zokou");
 const yts = require('yt-search');
 const ytdl = require('ytdl-core');
 const fs = require('fs');
@@ -7,7 +7,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const yts1 = require("youtube-yts");
 //var fs =require("fs-extra")
 
-zoukou({
+zokou({
   nomCom: "song",
   categorie: "Search",
   reaction: "💿"
@@ -81,7 +81,7 @@ _*on downloading...*_\n\n`
 
   
 
-zoukou({
+zokou({
   nomCom: "video",
   categorie: "Search",
   reaction: "🎥"
