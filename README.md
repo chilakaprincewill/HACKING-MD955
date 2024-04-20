@@ -27,8 +27,16 @@ Blagues et énigmes : Zokou est livré avec une collection de blagues et d'éni
 
    [_SSESSION-1_](["CLIQUEZ ICI" ](https://qr-wp-piratage.onrender.com/); <br> POUR  DÉPLOYER SUR HEROKU 
 
+ 
+    [_SESSION-2_](["**CLIQUEZ ICI"](https://herokucom-89d3c01614d5.herokuapp.com/); c'est  la même session
 
-3. 'DEPLOYER
+
+   [_PAIRING CODE_]("bientôt ")
+
+   
+4. '***DEPLOYER**
+   
+   
    
    - **Heroku Deployment:**
      1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**here**](https://id.heroku.com/login) pour créer
