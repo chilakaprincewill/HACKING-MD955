@@ -46,7 +46,7 @@ const date = moment().format('DD/MM/YYYY');
 ╰─────✧THO-BOT✧─────◆ \n\n`;
     
 let menuMsg = `
-👋 Salut thomas ${nomAuteurMessage} 👋
+👋 Salut comment allez ${nomAuteurMessage} 👋
 
 *List of commands :*
 ◇                             ◇
@@ -65,10 +65,10 @@ let menuMsg = `
     menuMsg += `
 ◇            ◇
 *»»————— ★ —————««*
-"To use a command, insert ${prefixe} followed by the command_name."
+"Mettre la commande, et insert ${prefixe} tu like by la commande_nom."
  
-    Powered by HACKING-MD 
-   voici mon lien Yubtb:"https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd"                                          
+    Support by HACKING-MD 
+   Voici mon lien Youtube:"https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd"                                          
 *»»————— ★ —————««*
 `;
 
