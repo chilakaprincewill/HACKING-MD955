@@ -671,8 +671,8 @@ zk.ev.on('group-participants.update', async (group) => {
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
             let msg = `╔════◇◇◇═════╗
-║ bienvenue les  nouvoux(s) membre(s)
-║ *New(s) Member(s) :*0
+║ bienvenue chère  nouvoux(s) membre(s)
+║ *Nouveaux(s) Membre(s) :*voici lien YouTube:https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd",
 `;
 
             let membres = group.participants;
