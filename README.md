@@ -2,14 +2,14 @@
 
 
 
-**HACKING est un robot multi-appareils conçu pour améliorer vos conversations WhatsApp avec des fonctionnalités utiles et amusantes. Qu'il s'agisse de gérer des fichiers, d'interagir avec des autocollants ou de faciliter la gestion de groupe, Zokou est là pour vous aider**.
+**HACKING est un robot multi-appareils conçu pour améliorer vos conversations WhatsApp avec des fonctionnalités utiles et amusantes. Qu'il s'agisse de gérer des fichiers, d'interagir avec des autocollants ou de faciliter la gestion de groupe, HACKING est là pour vous aider**.
 
 
 ## Principales caractéristiques
 
 **Téléchargement de fichiers : Hacking peut télécharger des fichiers audio et vidéo à partir des liens que vous envoyez, ce qui facilite leur partage avec vos contacts.
 
-Exportation d'autocollants : vous pouvez exporter des autocollants depuis Telegram et les utiliser dans vos conversations WhatsApp en les envoyant simplement à Zokou.
+Exportation d'autocollants : vous pouvez exporter des autocollants depuis Telegram et les utiliser dans vos conversations WhatsApp en les envoyant simplement à Hacking.
 
 Gestion de groupe : Haking propose des fonctionnalités de gestion de groupe, telles que l'ajout ou la suppression de membres, la configuration de règles et d'autres paramètres.
 
@@ -21,7 +21,7 @@ Blagues et énigmes : Hacking est livré avec une collection de blagues et d'é
 
 ## HACKING 
 
-1 MON GROUPE  WHATSAPP **[lien ici]([ ](https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ) Si tu à  besoin d'aide  tu peux  rejoindre pour  mon groupe WhatsApp 
+1 MON GROUPE  WHATSAPP **[lien ici du groupe]([ ](https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ) Si tu à  besoin d'aide  tu peux  rejoindre pour  mon groupe WhatsApp 
 
 2. "**Obtenu la session**", 
 
@@ -39,7 +39,7 @@ Blagues et énigmes : Hacking est livré avec une collection de blagues et d'é
    
    
    - **Heroku Deployment:**
-     1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**here**](https://id.heroku.com/login) pour créer
+     1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**ICI HEROKU CREATE**](https://id.heroku.com/login) pour créer
 
 5. 
      2. **Cliquez** [**ICI POUR HEROKU**](https://dashboard.heroku.com/new?template=https://github.com/HACKING995/HACKING-MD955) POUR DEPLOYER SUR **Heroku**.
