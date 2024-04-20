@@ -27,11 +27,16 @@ Blagues et énigmes : Hacking est livré avec une collection de blagues et d'é
 
    [_SSESSION-1_](["CLIQUEZ ICI" ](https://qr-wp-piratage.onrender.com/); <br> POUR  DÉPLOYER SUR HEROKU 
 
+
+
  
-    [_SESSION-2_](["**CLIQUEZ ICI"](https://herokucom-89d3c01614d5.herokuapp.com/); c'est  la même session
+  3.  [_SESSION-2_](["**CLIQUEZ ICI"](https://herokucom-89d3c01614d5.herokuapp.com/); c'est  la même session
+
+
 
 
    [_PAIRING CODE_]("bientôt ")
+
 
    
 4. '***DEPLOYER**
@@ -39,10 +44,17 @@ Blagues et énigmes : Hacking est livré avec une collection de blagues et d'é
    
    
    - **Heroku Deployment:**
-     1 Si tu n'a pas compte **Heroku** tu peux,  cliquer [**ICI HEROKU CREATE**](https://id.heroku.com/login) pour créer
 
-5. 
+
+   
+     ***Si tu n'a pas compte*** **Heroku** tu peux,  cliquer [**ICI HEROKU CREATE**](https://id.heroku.com/login) POUR CRÉER  UN COMPTE HEROKU 
+
+
+
+   
      2. **Cliquez** [**ICI POUR HEROKU**](https://dashboard.heroku.com/new?template=https://github.com/HACKING995/HACKING-MD955) POUR DEPLOYER SUR **Heroku**.
+
+
 
 
 ## License
