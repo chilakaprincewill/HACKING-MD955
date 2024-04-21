@@ -98,7 +98,7 @@ zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOpti
   await zk.sendMessage(auteurMessage,{text :`https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ`},{quoted :ms})
 
 });
-zokou({
+zokou({nomCom:"clear", catégorie: " général "},
 	pattern: 'clear',
 	fromMe: true,
 	desc: 'delete whatsapp chat',
