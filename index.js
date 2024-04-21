@@ -862,9 +862,10 @@ ${metadata.desc}`;
 
 ╔═════◇
 
-
- if there are somes error you can tell us :) 
- thanks you for choosing HACK MD
+YouTube:"https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd"
+ 
+s'il y a des erreurs, vous pouvez nous le dire :)
+  merci d'avoir choisi HACKING MD
 
 ╚══════════════════╝`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
