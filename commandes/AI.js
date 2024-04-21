@@ -54,8 +54,8 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       }
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
-      const image = arg.join(' ');
-      const response = await axios.get(`https://imageai.codingteamapi.workers.dev/?gen=${image}"&token"=CTAPI-012AXEVMWcICYNTGnpEfqMTuRI`);
+      const image = arg.buffer(' ');
+      const response = await axios.get(`https://imageai.codingteamapi.workers.dev/?gen=${image}&token=CTAPI-012AXEVMWcICYNTGnpEfqMTuRI`);
       
       const data = response.data;
       let caption = '*powered by HACKING-MD*';
