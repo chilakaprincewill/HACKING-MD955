@@ -97,24 +97,4 @@ zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOpti
   repondre("look on pm sir ")
   await zk.sendMessage(auteurMessage,{text :`https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ`},{quoted :ms})
 
-});
-zokou({nomCom:"clear", catégorie: " général "},
-	pattern: 'clear',
-	fromMe: true,
-	desc: 'delete whatsapp chat',
-	type: 'gerneral'
-}, async (message, match) => { 
-    try{   
-	await message.bot.generalModify({
-                
-		delete: true,
-		lastMessages: [{
-			key: message.key,
-			messageTimestamp: message.messageTimestamp
-		}]
-	}, message.jid)
-
-	await message.send('_Cleared!_')
-    }catch(e){ message.error(`${e}\n\nCommand : clear` , e, false) }
 })
-
