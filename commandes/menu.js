@@ -33,30 +33,30 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧${s.BOT}✧────◆
-│   *Préfix* : ${s.PREFIXE}
-│   *Owner* : ${s.OWNER_NAME}
-│   *Mode* : ${mode}
-│   *Commands* : ${cm.length}
-│   *Date* : ${date}
-│   *Hour* : ${temps}
-│   *Mémoire* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│   *Plateforme* : ${os.platform()}
-│   *Développer* : Thomas
-│  & MD-hacker
+|👉│   _Préfix_ : ${s.PREFIXE}
+|👉│   _Proprio_ : ${s.OWNER_NAME}
+|👉│   _Mode_ : ${mode}
+|👉│   _Commands_ : ${cm.length}
+|👉│   _Date_ : ${date}
+|👉│   _Heure_ : ${temps}
+|👉│   _Mémoire_ : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+|👉│   _Plateforme_ : ${os.platform()}
+|👉│   _Développer_ : Thomas
+|👉│  & MD-hacker
 ╰─────✧THO-BOT✧─────◆ \n\n`;
     
 let menuMsg = `
 👋 Salut comment allez ${nomAuteurMessage} 👋
 
-*List of commands :*
+*Liste des commandes de HACKING-MD:*
 ◇                             ◇
 `;
 
     for (const cat in coms) {
-        menuMsg += `╭────❏ ${cat} ❏`;
+        menuMsg += ` ╭────☢️${cat} ❏✧────`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-│ ${cmd}`;
+| ■│ ${cmd}`;
         }
         menuMsg += `
 ╰═════════════⊷ \n`
@@ -65,9 +65,9 @@ let menuMsg = `
     menuMsg += `
 ◇            ◇
 *»»————— ★ —————««*
-"Mettre la commande, et insert ${prefixe} tu like by la commande_nom."
+"Mettre la commande, et insert ${prefixe} tu like et la commande_nom."
  
-    Support by HACKING-MD 
+    *Support by HACKING-MD* 
    Voici mon lien Youtube:"https://youtube.com/@KouameDjakiss?si=k2HqPPSmHBZe3ABd"                                          
 *»»————— ★ —————««*
 `;
