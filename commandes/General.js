@@ -98,3 +98,43 @@ zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOpti
   await zk.sendMessage(auteurMessage,{text :`https://chat.whatsapp.com/CmrAOrFSBMi4eXW8xL5UHZ`},{quoted :ms})
 
 })
+
+zokou({ nomCom: "developer", categorie: "General", reaction: "🐐" }, async (dest, zk, commandeOptions) => {
+    const { ms, mybotpic } = commandeOptions;
+
+    const devs = [
+      { nom: "Thomas", numero: "2250545065189" },
+      { nom: "᚛MD-hacker᚜", numero: "2250888697148" },
+      // Ajoute d'autres développeurs ici avec leur nom et numéro
+    ];
+
+    let message = "👋 *Welcome to Hacking-Md!* here is the developer numbers:\n\n";
+    for (const dev of devs) {
+      message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
+    }
+  var lien = mybotpic()
+    if (lien.match(/\.(mp4|gif)$/i)) {
+    try {
+        zk.sendMessage(dest, { video: { url: lien }, caption:message }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+// Vérification pour .jpeg ou .png
+else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
+    try {
+        zk.sendMessage(dest, { image: { url: lien }, caption:message }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+else {
+    repondre(lien)
+    repondre("link error");
+    
+}
+});
