@@ -13,7 +13,7 @@ zokou({ nomCom: 'quote', categorie: 'Group' }, async (dest, zk, commandeOptions)
       fetch('https://animechan.xyz/api/random')
         .then((response) => response.json())
         .then(async (quote) => {
-          repondre(`*FLASH-MD Quotes*
+          repondre(`*HACKING-MD Quotes*
 
 🎬 Anime: ${quote.anime}
 👤 Character: ${quote.character}
