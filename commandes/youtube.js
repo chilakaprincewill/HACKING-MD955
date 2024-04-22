@@ -15,7 +15,7 @@ zokou({
   const { ms, repondre, arg } = commandeOptions;
      
   if (!arg[0]) {
-    repondre("wich song do you want.");
+    repondre("quelle chanson veux-tu.");
     return;
   }
 
@@ -89,7 +89,7 @@ zokou({
   const { arg, ms, repondre } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("insert video name");
+    repondre("donne le nom de la  video");
     return;
   }
 
