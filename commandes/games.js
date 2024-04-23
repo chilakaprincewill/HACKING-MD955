@@ -1,6 +1,5 @@
 const {zokou} = require("../framework/zokou");
 const axios = require('axios');
-const traduire = require('../framework/traduction')
 
 
 
@@ -14,8 +13,8 @@ zokou({
 
     if (msgRepondu) {
         zk.sendMessage(origineMessage, {
-            text: `@${auteurMessage.split('@')[0]} invites @${auteurMsgRepondu.split('@')[0]}} Pour jouer au jeu de chifoumi (Pierre-feuille-ciseaux);
-Pour accepter le défi, tapez oui`,,
+            text: `@${auteurMessage.split('@')[0]} invite @${auteurMsgRepondu.split('@')[0]} Pour jouer au jeu de chifoumi (Pierre-feuille-ciseaux);
+Pour accepter le défi, tapez oui`,
             mentions: [auteurMessage, auteurMsgRepondu]
         });
 
@@ -29,22 +28,20 @@ Pour accepter le défi, tapez oui`,,
 
             if (repinv.message.conversation.toLowerCase() === 'oui' || repinv.message.extendedTextMessage.text.toLowerCase() === 'oui' ) {
 
-              let msg1 = `*player 1 :* @${auteurMsgRepondu.split('@')[0]}
+              let msg1 = `*joueur 1 :* @${auteurMsgRepondu.split('@')[0]}
 *joueur 2 :* @${auteurMessage.split('@')[0]}
-
 
 *Regle :* Le jeu va bientot debute , vous avez 1min maxi seconde pour faire un choix dans ma discussion  priver chacun son tours ;`
                 
       zk.sendMessage(origineMessage,{text : msg1,mentions : [auteurMessage, auteurMsgRepondu]} ) ;
 
-      let msg2 = `tu as  4 choices;
+      let msg2 = `Vous avez droit a 3 choix ;
 
-      pierre
-      papier
-      ciseaux 
-      thomas
-   
- Veillez envoyez votre choix`   `
+   pierre
+   papier
+   ciseaux
+
+ Veillez envoyez votre choix`
  let players = [auteurMessage,auteurMsgRepondu] ;
 let choix = [] ;
 
@@ -52,8 +49,7 @@ let choix = [] ;
   
         for (const player of players) {
         
-         zk.sendMessage(origineMessage,{ text : `@${player.split("@")[0]} Please go to this chat to make a choice
-         https://wa.me/${idBot.split('@')[0]} ` , mentions : [player]})
+         zk.sendMessage(origineMessage,{ text : `@${player.split("@")[0]} Veillez vous diriger dans cette discussion pour faire un choix https://wa.me/${idBot.split('@')[0]} ` , mentions : [player]})
             zk.sendMessage(player,{text : msg2}) ;
              
           const msgrecu =  await zk.awaitForMessage({
@@ -69,7 +65,7 @@ let choix = [] ;
         }
 
         console.log(choix)
-  const choixPossibles = ["pierre", "papier", "ciseaux","thomas"];    
+  const choixPossibles = ["pierre", "papier", "ciseaux"];    
   
   const choixJoueur1 = choix[0] ;
 const choixJoueur2 = choix[1] ;
@@ -91,20 +87,19 @@ resultat : il y'a donc match nul` , mentions : [auteurMessage, auteurMsgRepondu]
 } else if (
     (choixJoueur1 === "pierre" && choixJoueur2 === "ciseaux") ||
     (choixJoueur1 === "papier" && choixJoueur2 === "pierre") ||
-    (choix joueur1 === "thomas" && choix joueur2 === "thomas")
     (choixJoueur1 === "ciseaux" && choixJoueur2 === "papier")
 ) {
     // Joueur 1 gagne
-    zk.sendMessage(origineMessage,{ text : `*joueur 1 :* @${auteurMsgRepondu.split('@')[0]} choisir *${choixJoueur2}* 
-*joueu 2 :* @${auteurMessage.split('@')[0]} choix *${choixJoueur1}*
+    zk.sendMessage(origineMessage,{ text : `*joueur 1 :* @${auteurMsgRepondu.split('@')[0]} a choisi(e) *${choixJoueur2}* 
+*joueur 2 :* @${auteurMessage.split('@')[0]} a choisi(e) *${choixJoueur1}*
 
-*result :* @${auteurMessage.split('@')[0]} win ` ,mentions : [auteurMessage, auteurMsgRepondu] });
+*resultat :* @${auteurMessage.split('@')[0]} remporte la partie ` ,mentions : [auteurMessage, auteurMsgRepondu] });
 } else {
     // Joueur 2 gagne
-    zk.sendMessage(origineMessage,{ text : `*joueur 1 :* @${auteurMsgRepondu.split('@')[0]} choisir *${choixJoueur2}* 
-*joueur 2 :* @${auteurMessage.split('@')[0]} choisir) *${choixJoueur1}*
+    zk.sendMessage(origineMessage,{ text : `*joueur 1 :* @${auteurMsgRepondu.split('@')[0]} a choisi(e) *${choixJoueur2}* 
+*joueur 2 :* @${auteurMessage.split('@')[0]} a choisi(e) *${choixJoueur1}*
 
-*result :* @${auteurMsgRepondu.split('@')[0]} win ` , mentions : [auteurMessage, auteurMsgRepondu] });
+*resultat :* @${auteurMsgRepondu.split('@')[0]} remporte la partie ` , mentions : [auteurMessage, auteurMsgRepondu] });
 }
 
            } catch (error) {
@@ -114,8 +109,7 @@ resultat : il y'a donc match nul` , mentions : [auteurMessage, auteurMsgRepondu]
 *joueur 2 :* @${auteurMessage.split('@')[0]}
 
 *resultat :* nos joueurs ont mis trop de temps pour ce decider ;
-Par consequent , le jeu est annuler`
-` , mentions : [auteurMessage, auteurMsgRepondu]});
+Par consequent , le jeu est annuler` , mentions : [auteurMessage, auteurMsgRepondu]});
             } else {
                 // Gérez d'autres erreurs ici si nécessaire
                 console.error(error);
@@ -123,23 +117,20 @@ Par consequent , le jeu est annuler`
            }
         
            } else {
-                repondre('invitation refuser') ;
+                repondre('invitation refuse') ;
             }
             
 
-      } catch (error) {
+        } catch (error) {
             if (error.message === 'Timeout') {
                 // Le temps d'attente est écoulé
-                zk.sendMessage(origineMessage,{ text : `@${auteurMsgRepondu.split('@')[0]} a mis trop de temps pour repondre a l'invitation de
-                @${auteurMessage.split('@')[0]} ;
-Par consequent , le jeu est annuler``, mentions : [auteurMessage, auteurMsgRepondu]});
+                zk.sendMessage(origineMessage,{ text : `@${auteurMsgRepondu.split('@')[0]} a mis trop de temps pour repondre a l'invitation de @${auteurMessage.split('@')[0]} ;
+Par consequent , le jeu est annuler`, mentions : [auteurMessage, auteurMsgRepondu]});
             } else {
                 // Gérez d'autres erreurs ici si nécessaire
                 console.error(error);
             }
         }
-    } else {
-        repondre('Chifumi  is an rock-paper-scissors games ; you need a friend too play , mention his/her message when sending chifumi to invite him/her') ;
     }
 });
 
@@ -155,8 +146,8 @@ zokou(
          
    let msg = `     Hacking-Quizz-Games
 
-*Categorie :* ${ await traduire(quizz.data.quizzes[0].category , {to : 'fr'})}
-*Question :* ${ await traduire(quizz.data.quizzes[0].question, {to : 'fr'})}\n\n*Answers :*\n`
+*Categorie :* ${quizz.data.quizzes[0].category}
+*Question :* ${quizz.data.quizzes[0].question}\n\n*Propositon de reponses :*\n`
     
 let Answers =[] ;
        for (const reponse of quizz.data.quizzes[0].badAnswers) {
@@ -186,7 +177,7 @@ let Answers =[] ;
 
 
      msg+= `
-Entrez le chiffre de votre choix` `
+Entrez le chiffre de votre choix`
              
        repondre(msg) ;
 
@@ -204,10 +195,10 @@ Entrez le chiffre de votre choix` `
 
     if (choix[repse - 1 ] == quizz.data.quizzes[0].answer ) {
 
-        repondre(" Bravo vous avez trouvez la bonne reponse ;")
+        repondre("Bravo vous avez trouvez la bonne reponse ;")
     } else {
 
-        repondre("erreur fin de quizz")
+        repondre("Erreur fin du quizz")
     }
 
         } catch (error) {
