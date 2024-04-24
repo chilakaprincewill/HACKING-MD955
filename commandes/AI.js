@@ -75,7 +75,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
   const axios = require('axios');
 
-async function zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -87,7 +87,6 @@ async function zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async
     const question = arg.join(' ');
     const response = await axios.get(`https://api.openai.com/v1/engines/davinci-codex/completions?prompt=${question}`, {
       headers: {
-        'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.sk-proj-3twvnUBCBO31LqCzEklIT3BlbkFJ9SyJiKFl2tGndxLgNYoA}`
       }
     });
