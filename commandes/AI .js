@@ -34,7 +34,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     });
 })
 .catch(error => {
-  console.error('Erreur lors de la requête à BrainShop :', error);
+  console.error('Erreur lors de la requête à Thomas :', error);
   repondre('Erreur lors de la requête à BrainShop');
 });
 
@@ -58,7 +58,7 @@ zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, c
     const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
     
     const data = response.data;
-    let caption = '*Propulsé par ZOKOU-MD*';
+    let caption = '*Propulsé par Hacking-MD*';
     
     if (data.status && data.owner && data.data) {
       // Utiliser les données retournées par le service
