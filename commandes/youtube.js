@@ -28,16 +28,18 @@ zokou({
       const urlElement = videos[0].url;
           
        let infoMess = {
-          image: {url : videos[0]. thumbnail},
-         caption : `\n*song name :* _${videos[0].title}_
+  image: { url: videos[0].thumbnail },
+  caption: `*Song Name:* ${videos[0].title}
+*Uploaded:* ${videos[0].ago}
+*Author:* ${videos[0].author.name}
+*URL:* ${videos[0].url}
 
-*Time :* _${videos[0].timestamp}_
+*Choose format:*
+1. MP3
+2. MP4
 
-*Url :* _${videos[0].url}_
-
-
-_*on downloading...*_\n\n`
-       }
+_*Downloading...*_\n\n`
+};
 
       
 
@@ -102,12 +104,18 @@ zokou({
       const Element = videos[0];
 
       let InfoMess = {
-        image: { url: videos[0].thumbnail },
-        caption: `*Video name :* _${Element.title}_
-*Time :* _${Element.timestamp}_
-*Url :* _${Element.url}_
-_*On downloading...*_\n\n`
-      };
+  image: { url: Element.thumbnail },
+  caption: `*Video Name:* ${Element.title}
+*Uploaded:* ${Element.ago}
+*Author:* ${Element.author.name}
+*URL:* ${Element.url}
+
+*Choose format:*
+1. MP3
+2. MP4
+
+_*Downloading...*_\n\n`
+};
 
       zk.sendMessage(origineMessage, InfoMess, { quoted: ms });
 
