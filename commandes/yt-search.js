@@ -18,9 +18,9 @@ zokou({ nomCom: "yts", categorie: "Search", reaction: "🐅" }, async (dest, zk,
     const resultat = info.videos;
 
     let captions = "";
-    for (let i = 0; i < 15; i++) {
-      captions += `----------------\nTitle: ${resultat[i].title}\nTime : ${resultat[i].timestamp}\nUrl: ${resultat[i].url}\n`;
-    }
+for (let i = 0; i < 15; i++) {
+  captions += `----------------\n${i + 1}. Title: ${resultat[i].title}\nTime : ${resultat[i].timestamp}\nUrl: ${resultat[i].url}\n`;
+}
     captions += "\n======\n*powered by hacking-Md*";
 
     // repondre(captions)
