@@ -73,29 +73,35 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
   });
   
-  zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`s'ils vous plaît votre question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const response = await axios.get(`token=CTAPI-012AXEVMWcICYNTGnpEfqMTuRI&{question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.data);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
-    }
-  });
+  const axios = require('axios');
 
+async function zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
+
+  try {
+    if (!arg || arg.length === 0) {
+      return repondre(`Veuillez poser une question s'il vous plaît.`);
+    }
+
+    // Regrouper les arguments en une seule chaîne séparée par "-"
+    const question = arg.join(' ');
+    const response = await axios.get(`https://api.openai.com/v1/engines/davinci-codex/completions?prompt=${question}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.sk-proj-3twvnUBCBO31LqCzEklIT3BlbkFJ9SyJiKFl2tGndxLgNYoA}`
+      }
+    });
+
+    const data = response.data;
+    if (data && data.choices && data.choices.length > 0) {
+      repondre(data.choices[0].text);
+    } else {
+      repondre("Erreur lors de la génération de la réponse.");
+    }
+  } catch (error) {
+    console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+    repondre("Oops, une erreur s'est produite lors du traitement de votre demande.");
+  }
+});
 
   
