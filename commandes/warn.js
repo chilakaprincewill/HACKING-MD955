@@ -3,9 +3,7 @@ const {ajouterUtilisateurAvecWarnCount , getWarnCountByJID , resetWarnCountByJID
 const s = require("../set")
 
 
-zokou(
-    {
-        nomCom : 'warn',
+zokou({nomCom : 'warn',
         categorie : 'Group'
         
     },async (dest,zk,commandeOptions) => {
