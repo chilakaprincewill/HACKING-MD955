@@ -487,7 +487,7 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"incandescent Zokou-MD");return;
+        repondre(prefixe+"incandescent Hacking-MD");return;
       }
 
     var lien="https://en.ephoto360.com/text-effects-incandescent-bulbs-219.html";
@@ -497,3 +497,28 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
   }catch(e){repondre(e)}
 })
+
+
+zokou({nomCom:"gf×1",categorie:"Logo",reaction:"🤣"},async(dest,zk,commandeOptions)=>{
+
+
+  let {ms,arg,prefixe,repondre}=commandeOptions
+      let chut = `https://api.caliph.biz.id/api/kaneki?nama=${encodeURIComponent(text)}&apikey=caliphkey`
+      conn.sendFile(m.chat, chut, 'logo.png', `✅ Result`, m)
+      break
+})
+
+zokou({nomCom:"gif×2",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeOptions)=>{
+
+
+  let {ms,arg,prefixe,repondre}=commandeOptions;
+  try{
+      if(!arg||arg=="")
+      {
+      let [a, b] = text.split('+')
+      let loda = `https://api.caliph.biz.id/api/girlneko?nama=${encodeURIComponent(a.trim())}&nama2=${encodeURIComponent(b.trim())}&apikey=caliphkey`
+      conn.sendFile(m.chat, loda, 'logo.png', `✅ Result`, m)
+
+      break
+
+      })
