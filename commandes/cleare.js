@@ -1,15 +1,14 @@
-const {zokou}=require("../framework/zokou")
+const { zokou } = require("../framework/zokou");
 
+zokou({ nomCom: "clear", categorie: "General", reaction: "🎚" }, async (dest, zk, com) => {
 
-
-zokou({nomCom:"clear",categorie:"General",reaction:"🎚"},async(dest,z,com)=>{
-
-
-
-
-	},
-	async (message, match) => {
-		await message.clearChat(message.jid)
-		await message.send('_Cleared_')
-	}
-)
+}, async (message, match) => {
+  try {
+    // Effacer tous les messages de la conversation
+    await message.clearChat(message.jid);
+    await message.send("_Cleared_");
+  } catch (error) {
+    console.error("Error:", error.message || "An error occurred");
+    await message.send("Oops, an error occurred while clearing the chat.");
+  }
+});
