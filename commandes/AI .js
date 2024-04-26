@@ -83,7 +83,7 @@ zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, com
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt4?prompt=${prompt}`);
+    const response = await axios.get(`https://ultimetron.guruapi.tech/gpt3?prompt=${question}`);
     
     const data = response.data;
     if (data) {
