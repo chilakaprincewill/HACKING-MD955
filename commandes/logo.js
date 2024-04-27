@@ -507,11 +507,11 @@ zokou({nomCom:"gif×1",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeO
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"gif×1 Zokou-MD");return;
+        repondre(prefixe+"gif×1 Thomas-MD");return;
       }
 
     var lien="https://api.caliph.biz.id/api/kaneki?nama=${encodeURIComponent(text)}&apikey=caliphkey"
-    var img = await mumaker.ephoto(lien,arg.join(' '));
+    var img = await mumaker.sendFile(m.chat, chut, 'logo.png', `✅ Result`, m)
    repondre("processing ...")
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
   }catch(e){repondre(e)}
