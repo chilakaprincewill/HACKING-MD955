@@ -8,7 +8,7 @@ const yts1 = require("youtube-yts");
 //var fs =require("fs-extra")
 
 zokou({
-  nomCom: "song",
+  nomCom: "play",
   categorie: "Search",
   reaction: "💿"
 }, async (origineMessage, zk, commandeOptions) => {
