@@ -33,6 +33,7 @@ const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
 ╭────✧${s.BOT}✧────◆
+     ╭──────────────
 |👉│   _Préfix_ : ${s.PREFIXE}
 |👉│   _Proprio_ : ${s.OWNER_NAME}
 |👉│   _Mode_ : ${mode}
@@ -43,6 +44,7 @@ const date = moment().format('DD/MM/YYYY');
 |👉│   _Plateforme_ : ${os.platform()}
 |👉│   _Développer_ : Thomas
 |👉│  & MD-hacker
+    ╰───────────────
 ╰─────✧THO-BOT✧─────◆ \n\n`;
     
 let menuMsg = `
@@ -56,7 +58,7 @@ let menuMsg = `
         menuMsg += ` ╭────☢️${cat} ❏✧────`;
         for (const cmd of coms[cat]) {
             menuMsg += `
-| ■│ ${cmd}`;
+*| ■│ ${cmd}*`;
         }
         menuMsg += `
 ╰═════════════⊷ \n`
