@@ -96,3 +96,32 @@ zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, com
     repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
   }
 });
+
+
+zokou ( { nomCom : "calcul" , réaction : "👌" , catégorie : "Général" } , async ( dest , zk , commandeOptions ) => { const { répondre , arg , ms } = commandeOptions ;
+
+si ( ! arg || arg . longueur === 0 ) { return repondre ( `Veuillez insérer des calculs mathématiques comme 100000-2024.\nUtilisez / pour la division et * pour la multiplication ou la lettre x` ) ; }
+// Regrouper les arguments en une seule chaîne séparée par "-" const pin = arg . rejoindre ( ' ' ) ; const réponse = wait fetch ( `https://api.maher-zubair.tech/search/pinterest?q= ${ pin } ` ) ;const data = attendre la réponse . json ( ) ;
+wait répondre ( data . result ) ;console . journal ( données . achèvement ) ; 
+
+} ) ;
+
+
+zokou({ nomCom: "thomas", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+    const { repondre, arg, ms } = commandeOptions;
+  
+    
+      if (!arg || arg.length === 0) {
+        return repondre(`Please ask a question.`);
+      }
+  
+      // Regrouper les arguments en une seule chaîne séparée par "-"
+      const question = arg.join(' ');
+     const response = await fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+const data = await response.json();
+
+await repondre(data.result);
+console.log(data.completion); 
+
+
+  });
