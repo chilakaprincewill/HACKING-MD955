@@ -97,23 +97,18 @@ zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, com
   }
 });
 
-zokou({ nomCom: "calcul", reaction: "👌", categorie: "Général" }, async (dest, zk, commandeOptions) => {
-  const { répondre, arg, ms } = commandeOptions;
-  
-  if (!arg || arg.length === 0) {
-    return repondre(`Veuillez insérer des calculs mathématiques comme 100000-2024.\nUtilisez / pour la division et * pour la multiplication ou la lettre x.`);
-  }
-  
-  // Regrouper les arguments en une seule chaîne séparée par "-"
-  const pin = arg.join('-');
-  const réponse = await fetch(`https://api.maher-zubair.tech/search/pinterest?q=${pin}`);
-  const data = await réponse.json();
-  
-  await repondre(data.result);
-  console.log(data.achèvement);
+zokou({ nomCom: "calcul", reaction: "😂", categorie: "IA" }, async (dest, zk, commandeOptions) => { const { repondre, arg, ms } = commandeOptions;
+
+if (!arg || arg.length === 0) { return repondre(`Please insert maths calculations like 1000*2.`); }
+// Regrouper les arguments en une seule chaîne séparée par "-" const cal = arg.join(' ');
+const response = await fetch(`https://api.maher-zubair.tech/ai/mathssolve?q=${cal}`);
+const data = await response.json();
+await repondre(data.result);console.log(data.completion); 
+
 });
 
-zokou({ nomCom: "thomas", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+
+zokou({ nomCom: "thomas", reaction: "🌏", categorie: "IA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   if (!arg || arg.length === 0) {
