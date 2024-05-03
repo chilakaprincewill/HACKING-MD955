@@ -106,10 +106,10 @@ zokou({ nomCom: "calcul", reaction: "👌", categorie: "Général" }, async (des
   
   // Regrouper les arguments en une seule chaîne séparée par "-"
   const pin = arg.join('-');
-  const réponse = await.get(`https://api.maher-zubair.tech/search/pinterest?q=${pin}`);
+  const réponse = await fetch(`https://api.maher-zubair.tech/search/pinterest?q=${pin}`);
   const data = await réponse.json();
   
-  await répondre(data.result);
+  await repondre(data.result);
   console.log(data.achèvement);
 });
 
@@ -122,7 +122,7 @@ zokou({ nomCom: "thomas", reaction: "📡", categorie: "IA" }, async (dest, zk, 
 
   // Regrouper les arguments en une seule chaîne séparée par "-"
   const question = arg.join(' ');
-  const response = await.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+  const response = await fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
   const data = await response.json();
 
   await repondre(data.result);
