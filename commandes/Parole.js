@@ -1,64 +1,53 @@
-const {zokou} =require("../framework/zokou");
-const axios =require("axios");
+
+const {zokou} = require("../framework/zokou");
+const axios = require("axios");
 const Genius = require("genius-lyrics"); 
- const Client = new Genius.Client("jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO");
-
-
+const Client = new Genius.Client("jKTbbU-6X2B9yWWl-KOm7Mh3_Z6hQsgE4mmvwV3P3Qe7oNa9-hsrLxQV5l5FiAZO");
 
 zokou({ nomCom: "poll",
         reaction: "✨",
         categorie: "General" }, async (dest, zk, commandeOptions) => {
     
     const { repondre, arg, ms } = commandeOptions; 
-const polll = arg.join(' ');
+    const polll = arg.join(' ');
 
+    let [poll, opt] = polll.split("/");
 
+    if (opt.split(",").length < 2) {
+        return repondre(`Format incorrect.\nExemple : poll Quelle est la réponse/Option 1, Option 2`);
+    }
 
-let [poll, opt] = polll.split("/")
+    let options = [];
+    for (let i of opt.split(',')) {
+        options.push(i.trim());
+    }
 
-if (polll.split("/") < 2)
-                return repondre(`Incorrect format.\nExample: poll what is 1+1/2, 3, 4`);
+    await zk.sendMessage(dest, {
+        poll: {
+            name: poll.trim(),
+            values: options
+        }
+    });
+});
 
-let options = []
-            for (let i of opt.split(',')) {
-                options.push(i)
-            }
-            await zk.sendMessage(dest, {
-                poll: {
-                    name: poll,
-                    values: options
-                }
-            })
-
-})
-
- zokou({ nomCom: "fact",
+zokou({ nomCom: "fact",
         reaction: "✌️",
         categorie: "User" }, async (dest, zk, commandeOptions) => {
     
     const { repondre, arg, ms } = commandeOptions; 
 
+    const response = await axios.get('https://nekos.life/api/v2/fact');
+    const data = response.data;
 
-
-const response = await fetch('https://nekos.life/api/v2/fact');
-
-
-const data = await response.json();
-
-repondre(`◆━━━━━━✦FACT✦━━━━━━◆  
+    repondre(`◆━━━━━━✦FACT✦━━━━━━◆  
 *◇* ${data.fact}
-
-
-
 
 *◇* Powered by *France King*
 
 ╔═════◇
 ║◇ *KEEP USING HACKING-MD*
 ╚════════════════════>  `);
-
-
-})
+});
 
 zokou({ nomCom: "quotes",
         reaction: "🗿",
@@ -66,74 +55,69 @@ zokou({ nomCom: "quotes",
     
     const { repondre, arg, ms } = commandeOptions; 
 
+    const response = await axios.get('https://favqs.com/api/qotd');
+    const data = response.data;
 
-const response = await fetch('https://favqs.com/api/qotd');
-const data = await response.json();
-const flashhh= `
+    const flashhh = `
 ◆━━━━━━✦QUOTE✦━━━━━━◆ 
-◇ _${data.quote.body}_\n
+◇ _${data.quote.body}_
 
 ◇ *AUTHOR:* ${data.quote.author}
 
-
-
-
 ◇ _Powered by:_ *Thomas*
-
 
 ╔═════◇
 ║◇ *KEEP USING HACKING-MD*
 ╚════════════════════> `;
-repondre(flashhh);
 
-})
-france({ nomCom: "define",
+    repondre(flashhh);
+});
+
+zokou({ nomCom: "define",
         reaction: "😁",
         categorie: "Search" }, async (dest, zk, commandeOptions) => {
     
     const { repondre, arg, ms } = commandeOptions;  
         
-if (!arg || arg.length === 0) return repondre("provide a term");
+    if (!arg || arg.length === 0) {
+        return repondre("Veuillez fournir un terme à définir.");
+    }
 
-         const ques = arg.join(' ');
+    const ques = arg.join(' ');
 
-        try{
-            let { data } = await axios.get(`http://api.urbandictionary.com/v0/define?term=${ques}`)
-            var textt = `
- Word: ${ques}
- Definition: ${data.list[0].definition.replace(/\[/g, "").replace(/\]/g, "")}
- Example: ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`
-            return repondre(textt)
-                    } catch {
-                        return repondre(`No result for ${ques}`)
-                    }
+    try {
+        const { data } = await axios.get(`http://api.urbandictionary.com/v0/define?term=${ques}`);
+        const textt = `
+        Mot : ${ques}
+        Définition : ${data.list[0].definition.replace(/\[/g, "").replace(/\]/g, "")}
+        Exemple : ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`;
 
-})
+        repondre(textt);
+    } catch (error) {
+        return repondre(`Aucun résultat pour ${ques}`);
+    }
+});
 
-        
 zokou({ nomCom: "lyrics2",
         reaction: "✨",
         categorie: "Search" }, async (dest, zk, commandeOptions) => {
     
     const { repondre, arg, ms } = commandeOptions;  
         
-   try {
+    try {
+        if (!arg || arg.length === 0) {
+            return repondre("Veuillez me fournir le nom de la chanson.");
+        }
 
-    if (!arg || arg.length === 0) return repondre("please provide me the song name");
+        const question = arg.join(' ');
 
-         const question = arg.join(' ');
+        const searches = await Client.songs.search(question); 
+        const firstSong = searches[0]; 
+        const lyrics = await firstSong.lyrics(); 
 
- 
-  
- const searches = await Client.songs.search(question); 
- const firstSong = searches[0]; 
- const lyrics = await firstSong.lyrics(); 
- await zk.sendMessage(dest, { text: lyrics}, { quoted: ms }); 
- } catch (error) { 
-             reply(`I did not find any lyrics for ${text}. Try searching a different song.`); 
-             console.log(error); 
-         } 
-
-
-
-        })
+        await zk.sendMessage(dest, { text: lyrics }, { quoted: ms }); 
+    } catch (error) { 
+        console.log(error);
+        return repondre(`Je n'ai pas trouvé de paroles pour ${text}. Essayez de chercher une autre chanson.`);
+    }
+});
