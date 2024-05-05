@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://vihangayt.me/tools/chatgpt4?q=${question}`);
+      const response = await axios.fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
       
       const data = response.data;
       if (data) {
@@ -97,5 +97,30 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
   });
 
+zokou({ nomCom: "calcul", reaction: "😂", categorie: "IA" }, async (dest, zk, commandeOptions) => { const { repondre, arg, ms } = commandeOptions;
 
+if (!arg || arg.length === 0) { return repondre(`Please insert maths calculations like 1000*2.`); }
+// Regrouper les arguments en une seule chaîne séparée par "-" const cal = arg.join(' ');
+const response = await fetch(`https://api.maher-zubair.tech/ai/mathssolve?q=${cal}`);
+const data = await response.json();
+await repondre(data.result);console.log(data.completion); 
+
+});
+
+
+zokou({ nomCom: "thomas", reaction: "🌏", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
+
+  if (!arg || arg.length === 0) {
+    return repondre(`Veuillez poser une question.`);
+  }
+
+  // Regrouper les arguments en une seule chaîne séparée par "-"
+  const question = arg.join(' ');
+  const response = await fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+  const data = await response.json();
+
+  await repondre(data.result);
+  console.log(data.completion);
+});
   
