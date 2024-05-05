@@ -36,7 +36,7 @@ Blagues et énigmes : Hacking est livré avec une collection de blagues et d'é
 
 2. "**Obtenu la session**", 
 
-   [_SSESSION-1_](["CLIQUEZ ICI" ](https://md-thomas-what34.000webhostapp.com/) ; <br> POUR  DÉPLOYER SUR HEROKU 
+   [_**SSESSION-1**_](["CLIQUEZ ICI" ](https://md-thomas-what34.000webhostapp.com/) ; *POUR  DÉPLOYER SUR HEROKU*
 
 
 
