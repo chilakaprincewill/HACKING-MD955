@@ -85,9 +85,9 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
       const question = arg.join(' ');
       const response = await axios.fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
       
-      const data = response.data;
+      const data = response.json();
       if (data) {
-        repondre(data.data);
+        repondre(data.result);
       } else {
         repondre("Error during response generation.");
       }
@@ -112,7 +112,7 @@ zokou({ nomCom: "thomas", reaction: "🌏", categorie: "IA" }, async (dest, zk, 
   const { repondre, arg, ms } = commandeOptions;
 
   if (!arg || arg.length === 0) {
-    return repondre(`Veuillez poser une question.`);
+    return repondre(`please ask a question.`);
   }
 
   // Regrouper les arguments en une seule chaîne séparée par "-"
