@@ -41,7 +41,7 @@ zokou({ nomCom: "fact",
     repondre(`◆━━━━━━✦FACT✦━━━━━━◆  
 *◇* ${data.fact}
 
-*◇* Powered by *France King*
+*◇* Powered by *Thomas*
 
 ╔═════◇
 ║◇ *KEEP USING HACKING-MD*
