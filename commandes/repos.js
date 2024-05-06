@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const { zokou } = require("../framework/zokou");
 
 zokou({ nomCom: "repo", catégorie:"Général", reaction: "🌏", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
-  const githubRepo = 'https://api.github.com/repos/HACKING995/HACKING--MD9';
+  const githubRepo = 'https://api.github.com/repos/HACKING995/HACKING955';
   const img = 'https://telegra.ph/file/b9a0855b3741a8b62a796.jpg';
 
   try {
@@ -21,8 +21,8 @@ zokou({ nomCom: "repo", catégorie:"Général", reaction: "🌏", nomFichier: __
       const releaseDate = new Date(data.created_at).toLocaleDateString('en-GB');
       const lastUpdateDate = new Date(data.updated_at).toLocaleDateString('en-GB');
 
-      const gitdata = `salut 👋 
-voici *Hacking-MD.*\n TU DEPLOYER DEPLOYER *REPO*, *SESSION_ID*  'https://md-thomas-what34.000webhostapp.com/'
+      const gitdata = `HELLO 👋 
+voici *Hacking-MD.*\n YOU DEPLOYE THIS *REPO*, *SESSION_ID*  'https://md-thomas-what34.000webhostapp.com/'
 
 🗼 *REPOSITORY:* ${data.html_url}
 ✨ *STARS:* ${repoInfo.stars}
