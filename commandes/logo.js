@@ -519,11 +519,11 @@ zokou({nomCom:"gif×1",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeO
 
 
 
-zokou({ nomCom: "avenger", catégorie: "Logo", réaction: "⛩" }, async (dest, zk, commandeOptions) => {
-    let { ms, arg, répondre, préfixe } = commandeOptions;
+zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk, commandeOptions) => {
+    let { ms, arg, repondre, prefixe } = commandeOptions;
     try {
         if (!arg || arg.length === 0) {
-            répondre(`Exemple : ${préfixe}avenger hacking`);
+            répondre(`Exemple : ${prefixe}avenger hacking`);
             return;
         }
         const text = arg.join(' ');
