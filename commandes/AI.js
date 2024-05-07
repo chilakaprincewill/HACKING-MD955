@@ -73,29 +73,25 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
   });
   
-  zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please ask a question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const response = await axios.fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
-      
-      const data = response.json();
-      if (data) {
-        repondre(data.result);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
-    }
-  });
+  zokou({ nomCom: "gpt", reaction: "🔎", categorie: "AI" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
+
+  if (!arg || arg.length === 0) {
+    return repondre(`Please ask a question.`);
+  }
+
+  // Combine the arguments into a single string separated by "-"
+  const question = arg.join(' ');
+  const réponse = await fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+  const data = await reponse.json();
+
+  if (data.result) {
+    repondre(data.result);
+    console.log(data.result);
+  } else {
+    repondre(`I'm sorry, I couldn't find an answer to your question.`);
+  }
+});
 
 zokou({ nomCom: "calcul", reaction: "😂", categorie: "IA" }, async (dest, zk, commandeOptions) => { const { repondre, arg, ms } = commandeOptions;
 
