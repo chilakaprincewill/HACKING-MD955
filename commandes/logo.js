@@ -516,3 +516,22 @@ zokou({nomCom:"gif×1",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeO
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
   }catch(e){repondre(e)}
 })
+
+
+
+zokou({ nomCom: "avenger", catégorie: "Logo", réaction: "⛩" }, async (dest, zk, commandeOptions) => {
+    let { ms, arg, répondre, préfixe } = commandeOptions;
+    try {
+        if (!arg || arg.length === 0) {
+            répondre(`Exemple : ${préfixe}avenger hacking`);
+            return;
+        }
+        const text = arg.join(' ');
+        const url = `https://textpro.me/create-3d-avengers-logo-online-974.html?text=${encodeURIComponent(text)}`;
+        const img = await mumaker.ephoto(url);
+        
+        await zk.sendMessage(dest, { image: { url: img.image }, caption: `Logo en piratant : ${text}` }, { cité: ms });
+    } catch (e) {
+        répondre("🥵🥵 " + e);
+    }
+});
