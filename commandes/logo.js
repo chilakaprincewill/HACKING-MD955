@@ -523,15 +523,15 @@ zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk
     let { ms, arg, repondre, prefixe } = commandeOptions;
     try {
         if (!arg || arg.length === 0) {
-            répondre(`Exemple : ${prefixe}avenger hacking`);
+            repondre(`Exemple : ${prefixe}avenger hacking`);
             return;
         }
         const text = arg.join(' ');
         const url = `https://textpro.me/create-3d-avengers-logo-online-974.html?text=${encodeURIComponent(text)}`;
         const img = await mumaker.ephoto(url);
         
-        await zk.sendMessage(dest, { image: { url: img.image }, caption: `Logo en piratant : ${text}` }, { cité: ms });
+        await zk.sendMessage(dest, { image: { url: img.image } *"Logo by Hacking-Md*"},  { quoted: ms });
     } catch (e) {
-        répondre("🥵🥵 " + e);
+        repondre("🥵🥵 " + e);
     }
 });
