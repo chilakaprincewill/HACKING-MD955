@@ -97,7 +97,7 @@ zokou({ nomCom: "define",
     }
 });
 
-zokou({ nomCom: "lyrics2",
+zokou({ nomCom: "lyrics",
         reaction: "✨",
         categorie: "Search" }, async (dest, zk, commandeOptions) => {
     
