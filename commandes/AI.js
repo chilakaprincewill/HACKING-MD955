@@ -73,7 +73,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
     }
   });
   
-  zokou({ nomCom: "gpt", reaction: "🔎", categorie: "AI" }, async (dest, zk, commandeOptions) => {
+  zokou({ nomCom: "gpt", reaction: "🔎", categorie: "IA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   if (!arg || arg.length === 0) {
@@ -83,11 +83,11 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   // Combine the arguments into a single string separated by "-"
   const question = arg.join(' ');
   const réponse = await fetch(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
-  const data = await reponse.json();
+  const data = await response.json();
 
   if (data.result) {
     repondre(data.result);
-    console.log(data.result);
+    console.log(data.completion);
   } else {
     repondre(`I'm sorry, I couldn't find an answer to your question.`);
   }
