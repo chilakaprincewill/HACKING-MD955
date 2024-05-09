@@ -6,7 +6,7 @@ let antiDeleteActive = true;
 
 zokou({
   nomCom: "anti-delete",
-  categorie: "General ",
+  categorie: "General",
   reaction: "🛡️"
 }, async (origineMessage, zk, commandeOptions) => {
   const { ms, arg } = commandeOptions;
