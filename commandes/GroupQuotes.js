@@ -37,7 +37,7 @@ Powered by *Hacking md*`);
 👤 Character: ${quote.character}
 💬 Quote: ${quote.quote}
 
-Powered by *FLASH-MD*`);
+Powered by *HACKING-MD*`);
         });
     } catch (e) {
       repondre('Erreur lors de la génération de la citation : ' + e.message);
