@@ -495,43 +495,39 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("processing ...")
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
-  }catch(e){repondre(e)}
-})
+  }
+});
 
-
-
-zokou({nomCom:"gif×1",categorie:"Logo",reaction:"😋"},async(dest,zk,commandeOptions)=>{
-
-
-  let {ms,arg,prefixe,repondre}=commandeOptions;
-  try{
-      if(!arg||arg=="")
-      {
-        repondre(prefixe+"gif×1 Thomas-MD");return;
-      }
-
-    var lien="https://api.caliph.biz.id/api/kaneki?nama=${encodeURIComponent(text)}&apikey=caliphkey"
-    var img = await mumaker.sendFile(m.chat, chut, 'logo.png', `✅ Result`, m)
-   repondre("processing ...")
-    await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
-  }catch(e){repondre(e)}
-})
-
-
-
-zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk, commandeOptions) => {
-    let { ms, arg, repondre, prefixe } = commandeOptions;
-    try {
-        if (!arg || arg.length === 0) {
-            repondre(`Exemple : ${prefixe}avenger hacking`);
-            return;
-        }
-        const text = arg.join(' ');
-        const url = `https://textpro.me/create-3d-avengers-logo-online-974.html?text=${encodeURIComponent(text)}`;
-        const img = await mumaker.ephoto(url);
-        
-        await zk.sendMessage(dest, { image: { url: img.image } *"Logo by Hacking-Md*"},  { quoted: ms });
-    } catch (e) {
-        repondre("🥵🥵 " + e);
+zokou({ nomCom: "gif×1", categorie: "Logo", reaction: "😋" }, async (dest, zk, commandeOptions) => {
+  let { ms, arg, prefixe, repondre } = commandeOptions;
+  try {
+    if (!arg || arg === "") {
+      repondre(`${prefixe}gif×1 Thomas-MD`);
+      return;
     }
+
+    const text = arg.join(" ");
+    const lien = `https://api.caliph.biz.id/api/kaneki?nama=${encodeURIComponent(text)}&apikey=caliphkey`;
+    const img = await mumaker.sendFile(m.chat, lien, 'logo.png', '✅ Result', m);
+    repondre("Processing...");
+    await zk.sendMessage(dest, { image: { url: img }, caption: "*Logo by Hacking-Md*" }, { quoted: ms });
+  } catch (e) {
+    repondre(e);
+  }
+});
+zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk, commandeOptions) => {
+  let { ms, arg, répondre, préfixe } = commandeOptions;
+  try {
+    if (!arg || arg.length === 0) {
+      repondre(`Exemple : ${préfixe} hacking avenger`);
+      return;
+    }
+    const texte = arg.join(' ');
+    const url = `https://textpro.me/create-3d-avengers-logo-online-974.html?text=${encodeURIComponent(texte)}`;
+    const img = await mumaker.ephoto(url);
+
+    await zk.sendMessage(dest, { image: { url: img.image }, caption: "Logo par Hacking-Md" }, { quoted: ms });
+  } catch (e) {
+    répondre("🥵🥵 " + e);
+  }
 });
