@@ -6,7 +6,7 @@ let antiDeleteActive = true;
 
 zokou({
   nomCom: "anti-delete",
-  categorie: "IA",
+  categorie: "General ",
   reaction: "🛡️"
 }, async (origineMessage, zk, commandeOptions) => {
   const { ms, arg } = commandeOptions;
@@ -16,18 +16,18 @@ zokou({
     const action = arg[0].toLowerCase();
     if (action === "on") {
       antiDeleteActive = true;
-      zk.sendMessage(origineMessage, "La commande anti-delete est activée.");
+      await zk.sendMessage(origineMessage, "La commande anti-delete est activée.");
       return;
     } else if (action === "off") {
       antiDeleteActive = false;
-      zk.sendMessage(origineMessage, "La commande anti-delete est désactivée.");
+      await zk.sendMessage(origineMessage, "La commande anti-delete est désactivée.");
       return;
     }
   }
 
   // Vérifier si la commande anti-delete est activée
   if (!antiDeleteActive) {
-    zk.sendMessage(origineMessage, "La commande anti-delete est actuellement désactivée.");
+    await zk.sendMessage(origineMessage, "La commande anti-delete est actuellement désactivée.");
     return;
   }
 
