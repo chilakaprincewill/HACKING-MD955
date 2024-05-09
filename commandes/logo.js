@@ -495,8 +495,8 @@ zokou({nomCom:"incandescent",categorie:"Logo",reaction:"😋"},async(dest,zk,com
     var img = await mumaker.ephoto(lien,arg.join(' '));
    repondre("processing ...")
     await zk.sendMessage(dest,{image:{url:img.image},caption:" *Logo by Hacking-Md*"},{quoted:ms})
-  }
-});
+  } catch(e){repondre(e)
+})
 
 zokou({ nomCom: "gif×1", categorie: "Logo", reaction: "😋" }, async (dest, zk, commandeOptions) => {
   let { ms, arg, prefixe, repondre } = commandeOptions;
@@ -514,7 +514,7 @@ zokou({ nomCom: "gif×1", categorie: "Logo", reaction: "😋" }, async (dest, zk
   } catch (e) {
     repondre(e);
   }
-});
+})
 zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk, commandeOptions) => {
   let { ms, arg, répondre, préfixe } = commandeOptions;
   try {
@@ -530,4 +530,4 @@ zokou({ nomCom: "avenger", categorie: "Logo", reaction: "⛩" }, async (dest, zk
   } catch (e) {
     répondre("🥵🥵 " + e);
   }
-});
+})
